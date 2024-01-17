@@ -1,11 +1,14 @@
 .navbar-header {
-text-align: center;
+text-align: start;
 width: 100%;
-color: rgba(12, 12, 12, 0.87);
+padding: 5px 5px;
+color: rgb(255, 255, 255);
+background-color: #193ba3dc;
+text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.4);
 }
 
 h2 {
-font-size: 1.5em;
+font-size: 1.4em;
 font-weight: 400;
 line-height: 1.5em;
 }
