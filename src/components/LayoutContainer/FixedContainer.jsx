@@ -1,6 +1,5 @@
 import * as React from 'react';
 import PropTypes from 'prop-types'; // Import PropTypes
-import CssBaseline from '@mui/material/CssBaseline';
 import { Box, Container } from '@mui/system';
 
 const FixedContainer = ({ children }) => {

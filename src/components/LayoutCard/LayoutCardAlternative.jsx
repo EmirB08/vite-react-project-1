@@ -1,9 +1,9 @@
-import React from 'react';
 import PropTypes from 'prop-types';
 import Card from '@mui/material/Card';
 import CardContent from '@mui/material/CardContent';
 import Typography from '@mui/material/Typography';
 import CardMedia from '@mui/material/CardMedia';
+import Box from '@mui/material/Box';
 
 const LayoutCardAlternative = ({ article }) => {
   return (
@@ -12,16 +12,21 @@ const LayoutCardAlternative = ({ article }) => {
         <Typography color="text.primary" gutterBottom variant="h5">
           {article.title}
         </Typography>
-        <CardMedia
-        component="img"
-        height="140"
-        image={article.image}
-        alt={article.title}
-      />
-        <Typography color="text.secondary" variant="body2">
+        <Typography color="text.secondary" variant="body2" sx={{ marginBottom: 2 }}>
           {article.body}
         </Typography>
-        <Typography color="text.secondary" variant="caption">
+        <Box display="flex" alignItems="center">
+        <Typography color="text.secondary" variant="body2" fontWeight="bold">
+            {article.author.username}
+          </Typography>
+          <CardMedia
+            sx={{ height: 22, width: 22, marginLeft: 1 }}
+            component="img"
+            image={article.author.image}
+            alt={article.author.username}
+          />
+          </Box>
+        <Typography color="text.secondary" variant="caption" fontWeight="bold">
           Created At: {new Date(article.createdAt).toLocaleDateString()}
         </Typography>
       </CardContent>
@@ -34,9 +39,13 @@ LayoutCardAlternative.propTypes = {
     title: PropTypes.string.isRequired,
     body: PropTypes.string.isRequired,
     createdAt: PropTypes.string.isRequired,
-    image: PropTypes.string,
+    author: PropTypes.shape({
+      username: PropTypes.string,
+      image: PropTypes.string,
+    }).isRequired,
   }).isRequired
 };
 
 export default LayoutCardAlternative;
+
 
