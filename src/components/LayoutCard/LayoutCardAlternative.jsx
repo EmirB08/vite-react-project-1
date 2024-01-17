@@ -17,7 +17,7 @@ const LayoutCardAlternative = ({ article }) => {
         </Typography>
         <Box display="flex" alignItems="center">
         <CardMedia
-            sx={{ height: 22, width: 22, marginRight: 1 }}
+            sx={{ height: 22, width: 22, marginRight: 1 }} // sx styling for å overwrite default styling
             component="img"
             image={article.author.image}
             alt={article.author.username}
@@ -34,7 +34,7 @@ const LayoutCardAlternative = ({ article }) => {
 );
 };
 
-LayoutCardAlternative.propTypes = {
+LayoutCardAlternative.propTypes = { // gikk ganske eksplisitt her, men grei trening
     article: PropTypes.shape({
     title: PropTypes.string.isRequired,
     body: PropTypes.string.isRequired,

@@ -7,7 +7,7 @@ import Box from '@mui/material/Box';
 
 const LayoutCard = ({ article }) => {
     return (
-    <Card sx={{ height: "240px", display: "flex", flexDirection: "column", justifyContent: "space-between", "&:hover": { cursor: "pointer" }}}>
+    <Card sx={{ height: "240px", display: "flex", flexDirection: "column", justifyContent: "space-between", "&:hover": { cursor: "pointer" }}}> 
     <CardContent>
         <Typography gutterBottom variant="h5" component="div">
         {article.title}
@@ -18,7 +18,7 @@ const LayoutCard = ({ article }) => {
     </CardContent>
     <Box sx={{ display: "flex", alignItems: "center"}}>
         <CardMedia
-        sx={{ height: 22, width: 22, marginRight: 1 }}
+        sx={{ height: 22, width: 22, marginRight: 1 }} // sx styling for å overwrite default styling
         component="img"
         image={article.author.image}
         alt={article.author.username}
@@ -31,7 +31,7 @@ const LayoutCard = ({ article }) => {
 );
 };
 
-LayoutCard.propTypes = {
+LayoutCard.propTypes = { // gikk ganske eksplisitt her, men grei trening
     article: PropTypes.shape({
     title: PropTypes.string.isRequired,
     description: PropTypes.string,
