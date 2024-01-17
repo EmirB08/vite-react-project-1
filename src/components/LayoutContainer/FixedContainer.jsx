@@ -21,3 +21,5 @@ FixedContainer.propTypes = {
 };
 
 export default FixedContainer;
+
+// Path: src/components/LayoutContainer/FluidContainer.jsx

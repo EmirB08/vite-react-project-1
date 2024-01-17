@@ -1,17 +1,18 @@
-import './App.css'
-import React from 'react'
-import ReactDOM from 'react-dom/client'
-
-import FixedContainer from './components/LayoutContainer/FixedContainer.jsx'
-import FullWidthGrid from './components/LayoutGrid/FullWidthGrid.jsx'
+import './App.css';
+import React from 'react';
+import { posts } from './data/posts';
+import FixedContainer from './components/LayoutContainer/FixedContainer.jsx';
+import FullWidthGrid from './components/LayoutGrid/FullWidthGrid.jsx';
 
 function App() {
+  console.log('Posts object:', posts);
+
   return (
-      <FixedContainer>
-      <FullWidthGrid>
-      </FullWidthGrid>
-      </FixedContainer>
+    <FixedContainer>
+      <FullWidthGrid articles={posts.articles} />
+    </FixedContainer>
   );
 }
 
 export default App;
+

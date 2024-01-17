@@ -1,34 +1,33 @@
-import * as React from 'react';
-import { styled } from '@mui/material/styles';
+import PropTypes from 'prop-types';
 import Box from '@mui/material/Box';
-import Paper from '@mui/material/Paper';
 import Grid from '@mui/material/Grid';
+import LayoutCard from "../LayoutCard/LayoutCard.jsx";
+import LayoutCardAlternative from "../LayoutCard/LayoutCardAlternative.jsx";
 
-const Item = styled(Paper)(({ theme }) => ({
-  backgroundColor: theme.palette.mode === 'dark' ? '#1A2027' : '#fff',
-  ...theme.typography.body2,
-  padding: theme.spacing(1),
-  textAlign: 'center',
-  color: theme.palette.text.secondary,
-}));
 
-export default function FullWidthGrid() {
+export default function FullWidthGrid({ articles }) {
   return (
     <Box sx={{ flexGrow: 1 }}>
       <Grid container spacing={2}>
-        <Grid item xs={6} md={8}>
-          <Item>xs=6 md=8</Item>
-        </Grid>
-        <Grid item xs={6} md={4}>
-          <Item>xs=6 md=4</Item>
-        </Grid>
-        <Grid item xs={6} md={4}>
-          <Item>xs=6 md=4</Item>
-        </Grid>
-        <Grid item xs={6} md={8}>
-          <Item>xs=6 md=8</Item>
-        </Grid>
+        {articles.map((article, index) => (
+          <Grid item xs={12} md={6} key={index}>
+            {index % 4 === 0 || index % 4 === 1 ? (
+              <LayoutCard article={article} />
+            ) : (
+              <LayoutCardAlternative article={article} />
+            )}
+          </Grid>
+        ))}
       </Grid>
     </Box>
   );
 }
+
+
+FullWidthGrid.propTypes = {
+  articles: PropTypes.arrayOf(PropTypes.shape({
+    title: PropTypes.string.isRequired,
+    description: PropTypes.string
+  })).isRequired
+};
+
