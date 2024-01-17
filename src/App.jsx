@@ -7,7 +7,6 @@ import Footer from './components/Footer/Footer';
 
 function App() {
   console.log('Posts object:', posts);
-
   return (
     <FixedContainer>
     <HeaderNavBar />

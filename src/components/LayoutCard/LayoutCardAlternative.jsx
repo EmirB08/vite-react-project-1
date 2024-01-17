@@ -6,14 +6,14 @@ import CardMedia from '@mui/material/CardMedia';
 import Box from '@mui/material/Box';
 
 const LayoutCardAlternative = ({ article }) => {
-  return (
+    return (
     <Card variant="outlined">
-      <CardContent>
+    <CardContent>
         <Typography color="text.primary" gutterBottom variant="h5">
-          {article.title}
+        {article.title}
         </Typography>
         <Typography color="text.secondary" variant="body2" sx={{ marginBottom: 2 }}>
-          {article.body}
+        {article.body}
         </Typography>
         <Box display="flex" alignItems="center">
         <CardMedia
@@ -21,21 +21,21 @@ const LayoutCardAlternative = ({ article }) => {
             component="img"
             image={article.author.image}
             alt={article.author.username}
-          />
+        />
         <Typography color="text.secondary" variant="body2" fontWeight="bold">
             {article.author.username}
-          </Typography>
-          </Box>
-        <Typography color="text.secondary" variant="caption" fontWeight="bold">
-          Created At: {new Date(article.createdAt).toLocaleDateString()}
         </Typography>
-      </CardContent>
+        </Box>
+        <Typography color="text.secondary" variant="caption" fontWeight="bold">
+        Created At: {new Date(article.createdAt).toLocaleDateString()}
+        </Typography>
+    </CardContent>
     </Card>
-  );
+);
 };
 
 LayoutCardAlternative.propTypes = {
-  article: PropTypes.shape({
+    article: PropTypes.shape({
     title: PropTypes.string.isRequired,
     body: PropTypes.string.isRequired,
     createdAt: PropTypes.string.isRequired,
