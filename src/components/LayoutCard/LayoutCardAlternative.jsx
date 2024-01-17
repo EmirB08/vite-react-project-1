@@ -16,15 +16,15 @@ const LayoutCardAlternative = ({ article }) => {
           {article.body}
         </Typography>
         <Box display="flex" alignItems="center">
-        <Typography color="text.secondary" variant="body2" fontWeight="bold">
-            {article.author.username}
-          </Typography>
-          <CardMedia
-            sx={{ height: 22, width: 22, marginLeft: 1 }}
+        <CardMedia
+            sx={{ height: 22, width: 22, marginRight: 1 }}
             component="img"
             image={article.author.image}
             alt={article.author.username}
           />
+        <Typography color="text.secondary" variant="body2" fontWeight="bold">
+            {article.author.username}
+          </Typography>
           </Box>
         <Typography color="text.secondary" variant="caption" fontWeight="bold">
           Created At: {new Date(article.createdAt).toLocaleDateString()}

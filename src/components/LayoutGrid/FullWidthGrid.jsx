@@ -23,7 +23,7 @@ export default function FullWidthGrid({ articles }) {
     <Box sx={{ flexGrow: 1 }}>
       <Grid container spacing={2}>
         {articles.map((article, index) => (
-          <Grid item xs={12} md={6} key={index} onClick={() => handleCardClick(article)}>
+          <Grid item xs={12} sm={12} md={6} key={index} onClick={() => handleCardClick(article)}>
             <LayoutCard article={article} />
           </Grid>
         ))}
