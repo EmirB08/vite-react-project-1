@@ -1,12 +1,12 @@
 import * as React from 'react';
-import PropTypes from 'prop-types'; // Import PropTypes
+import PropTypes from 'prop-types';
 import { Box, Container } from '@mui/system';
 
 const FixedContainer = ({ children }) => {
   return (
     <React.Fragment>
       <Container fixed>
-        <Box sx={{ bgcolor: 'rgb(26, 74, 115);', height: '100vh' }}>
+        <Box sx={{ height: '100vh' }}>
           {children}
         </Box>
       </Container>
@@ -19,5 +19,3 @@ FixedContainer.propTypes = {
 };
 
 export default FixedContainer;
-
-// Path: src/components/LayoutContainer/FluidContainer.jsx

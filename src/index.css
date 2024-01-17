@@ -3,5 +3,6 @@
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background-color: rgba(10, 5, 62, 0.909);
+  background-color: #f8f8f8;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
 }
