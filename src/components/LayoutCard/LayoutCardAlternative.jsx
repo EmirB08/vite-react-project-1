@@ -40,10 +40,10 @@ LayoutCardAlternative.propTypes = {
     body: PropTypes.string.isRequired,
     createdAt: PropTypes.string.isRequired,
     author: PropTypes.shape({
-      username: PropTypes.string,
-      image: PropTypes.string,
+    username: PropTypes.string,
+    image: PropTypes.string,
     }).isRequired,
-  }).isRequired
+}).isRequired
 };
 
 export default LayoutCardAlternative;
