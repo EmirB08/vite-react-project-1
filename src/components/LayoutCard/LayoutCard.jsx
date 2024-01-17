@@ -7,7 +7,7 @@ import Box from '@mui/material/Box';
 
 const LayoutCard = ({ article }) => {
   return (
-    <Card sx={{ height: "240px", display: "flex", flexDirection: "column", justifyContent: "space-between" }}>
+    <Card sx={{ height: "240px", display: "flex", flexDirection: "column", justifyContent: "space-between", "&:hover": { cursor: "pointer" }}}>
       <CardContent>
         <Typography gutterBottom variant="h5" component="div">
           {article.title}
