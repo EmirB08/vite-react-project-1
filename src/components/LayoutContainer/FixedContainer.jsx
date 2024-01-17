@@ -6,9 +6,8 @@ import { Box, Container } from '@mui/system';
 const FixedContainer = ({ children }) => {
   return (
     <React.Fragment>
-      <CssBaseline />
       <Container fixed>
-        <Box sx={{ bgcolor: '#fff', height: '100vh' }}>
+        <Box sx={{ bgcolor: 'rgb(26, 74, 115);', height: '100vh' }}>
           {children}
         </Box>
       </Container>
