@@ -3,6 +3,7 @@ import PropTypes from 'prop-types';
 import Card from '@mui/material/Card';
 import CardContent from '@mui/material/CardContent';
 import Typography from '@mui/material/Typography';
+import CardMedia from '@mui/material/CardMedia';
 
 const LayoutCardAlternative = ({ article }) => {
   return (
@@ -11,6 +12,12 @@ const LayoutCardAlternative = ({ article }) => {
         <Typography color="text.primary" gutterBottom variant="h5">
           {article.title}
         </Typography>
+        <CardMedia
+        component="img"
+        height="140"
+        image={article.image}
+        alt={article.title}
+      />
         <Typography color="text.secondary" variant="body2">
           {article.body}
         </Typography>
@@ -27,6 +34,7 @@ LayoutCardAlternative.propTypes = {
     title: PropTypes.string.isRequired,
     body: PropTypes.string.isRequired,
     createdAt: PropTypes.string.isRequired,
+    image: PropTypes.string,
   }).isRequired
 };
 

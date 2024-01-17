@@ -6,7 +6,7 @@ import PropTypes from 'prop-types';
 
 const LayoutCard = ({ article }) => {
     return (
-    <Card sx={{height: "250px"}}>
+    <Card sx={{height: "180px"}}>
         <CardContent>
         <Typography gutterBottom variant="h5" component="div">
         {article.title}
